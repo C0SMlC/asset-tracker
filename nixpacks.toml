@@ -5,7 +5,7 @@ builder = "python"
 python3 = true 
 
 [phases.install]
-pipInstall = ["requirements.txt"]  
+pipInstall = ["requirements.txt"]
 
-[phases.start]
+[start]
 cmd = "gunicorn --bind 0.0.0.0:8000 app:app"
