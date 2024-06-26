@@ -1,0 +1,11 @@
+[build]
+builder = "python"
+
+[phases.setup]
+python3 = true 
+
+[phases.install]
+pipInstall = ["requirements.txt"]  
+
+[phases.start]
+cmd = "python app.py"  
