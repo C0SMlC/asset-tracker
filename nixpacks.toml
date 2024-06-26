@@ -8,4 +8,4 @@ python3 = true
 pipInstall = ["requirements.txt"]  
 
 [phases.start]
-cmd = "python app.py"  
+cmd = "gunicorn --bind 0.0.0.0:8000 app:app"
