@@ -4,8 +4,8 @@ from flask import current_app
 
 def get_google_sheet():
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-    creds = Credentials.from_service_account_file(
-        current_app.config['GOOGLE_SHEETS_CREDENTIALS_FILE'], 
+    creds = Credentials.from_service_account_info(
+        current_app.config['GOOGLE_SHEETS_CREDENTIALS'], 
         scopes=SCOPES
     )
     client = gspread.authorize(creds)

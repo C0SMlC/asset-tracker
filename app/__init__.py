@@ -22,9 +22,6 @@ def create_app(config_class=Config):
     
     app.db = client[db_name]
 
-    # Initialize Google Sheets
-    # (We'll do this in the routes where it's needed)
-
     from app.routes import main
     app.register_blueprint(main)
 
