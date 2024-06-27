@@ -10,7 +10,7 @@ def create_app(config_class=Config):
     app.config.from_object(config_class)
 
     # Initialize CORS with specific settings
-    CORS(app, resources={r"/*": {"origins": ["https://qr-code-scanner-liard.vercel.app/"], "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]}})
+    CORS(app, resources={r"/*": {"origins": ["https://qr-code-scanner-liard.vercel.app"], "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]}})
 
     # Initialize MongoDB
     client = MongoClient(app.config['MONGODB_URI'])
