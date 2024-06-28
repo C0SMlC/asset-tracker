@@ -4,6 +4,10 @@ from app.utils import get_google_sheet
 
 main = Blueprint('main', __name__)
 
+@main.route('/')
+def index():
+    return jsonify({'message': 'Hello, World!'})
+
 @main.route('/scan', methods=['POST'])
 def scan_barcode():
     data = request.json
