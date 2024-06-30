@@ -39,6 +39,7 @@ def scan_barcode():
         if cell:
             # Update existing row
             row = cell.row
+            sheet.update_cell(row, 4, 'Yes')
             sheet.update_cell(row, 5, ist_now.strftime('%Y-%m-%d %H:%M:%S'))
             message = f'Asset {asset_number} updated in Google Sheets'
         else:
